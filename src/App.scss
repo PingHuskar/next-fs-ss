@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .App {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 2em;
+        text-align: center;
+        .today {
+            margin-bottom: 5vh;
+            text-decoration: 2px underline;
+        }
+        .fs {
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+            b {
+                text-decoration: 2px underline;
+            }
+            .cd {
+                font-weight: bold;
+                font-size: 3em;
+            }
+            p:last-child {
+                font-size: 1.25em;
+            }
+        }
+        .ss {
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+            b {
+                text-decoration: 2px underline;
+            }
+            .cd {
+                font-weight: bold;
+                font-size: 3em;
+            }
+            p:last-child {
+                font-size: 1.25em;
+            }
+        }
+    }
+}

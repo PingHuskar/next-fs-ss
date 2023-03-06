@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body .App {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  text-align: center;
+}
+body .App .today {
+  margin-bottom: 5vh;
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+}
+body .App .fs {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+body .App .fs b {
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+}
+body .App .fs .cd {
+  font-weight: bold;
+  font-size: 3em;
+}
+body .App .fs p:last-child {
+  font-size: 1.25em;
+}
+body .App .ss {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+body .App .ss b {
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+}
+body .App .ss .cd {
+  font-weight: bold;
+  font-size: 3em;
+}
+body .App .ss p:last-child {
+  font-size: 1.25em;
+}/*# sourceMappingURL=App.css.map */
