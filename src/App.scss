@@ -12,6 +12,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     .App {
         display: flex;
         flex-flow: column;
@@ -25,7 +26,7 @@ body {
             margin-bottom: 5vh;
             text-decoration: 2px underline;
         }
-        .fs {
+        .b1 {
             margin-top: 1vh;
             margin-bottom: 2vh;
             b {
@@ -39,7 +40,7 @@ body {
                 font-size: 1.25em;
             }
         }
-        .ss {
+        .b2 {
             margin-top: 1vh;
             margin-bottom: 2vh;
             b {
@@ -54,4 +55,7 @@ body {
             }
         }
     }
+}
+.firstcap {
+    text-transform:capitalize;
 }

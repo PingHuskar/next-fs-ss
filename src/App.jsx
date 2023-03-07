@@ -1,48 +1,20 @@
 import './App.css'
 import moment from 'moment/moment'
+import gsap from 'gsap'
+import { Block } from './Block'
 
-function fs() {
-  let c = 0
-  while (true) {
-    let z = moment().add(c, 'days')
-    // .calendar()
-    if (z.format('dddd') === 'Saturday' && z.format('D') <= 7) {
-      return <>
-      <p>Next <b>First {z.format('dddd')}</b> in <span className='cd'>{c}</span> Day{c>1 ? 's' : ''}</p>
-      <p><b>{z.format('LL')}</b></p>
-      </>
-    }
-    c++
-  }
-}
-function ss() {
-  let c = 0
-  while (true) {
-    let z = moment().add(c, 'days')
-    // .calendar()
-    if (z.format('dddd') === 'Sunday' && z.format('D') >= 8 && z.format('D') <= 14) {
-      return <>
-      <p>Next <b>Second {z.format('dddd')}</b> in <span className='cd'>{c}</span> Day{c>1 ? 's' : ''}</p>
-      <p><b>{z.format('LL')}</b></p>
-      </>
-    }
-    c++
-  }
-}
 function App() {
+  const ease = "back"
+  gsap.from(".today",{y: -screen.height, duration: 2, delay: 0,ease: ease})
+  gsap.from(".b1",{x: -screen.width, duration: 2, delay: .5,ease: ease})
+  gsap.from(".b2",{x: screen.width, duration: 2, delay: .75,ease: ease})
   return (
     <div className="App">
       <div className="today">
         Today is {moment().format('LL')}
       </div>
-      <hr />
-      <div className="fs">
-        {fs()}
-      </div>
-      <hr />
-      <div className="ss">
-        {ss()}
-      </div>
+      <Block className="b1" ordinal="first" dayoftheweek="saturday" />
+      <Block className="b2" ordinal="second" dayoftheweek="sunday" />
     </div>
   )
 }
