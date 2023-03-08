@@ -2,23 +2,25 @@ import './App.css'
 import moment from 'moment/moment'
 import gsap from 'gsap'
 import { Block } from './Block'
+import { SunOrMoon } from './SunOrMoon'
 import { useEffect } from 'react'
 
 
 function App() {
   useEffect(() => {
     const ease = "back"
-    gsap.from(".today",{y: -screen.height, duration: 2, delay: 0,ease: ease})
-    gsap.from(".b1",{x: -screen.width, duration: 2, delay: .5,ease: ease})
-    gsap.from(".b2",{x: screen.width, duration: 2, delay: .75,ease: ease})
+    gsap.from(".today",{x: -screen.width, duration: 2, delay: 0,ease: ease})
+    gsap.from(".block",{x: screen.width, duration: 2, delay: 0,ease: ease})
   })
   return (
     <div className="App">
-      <div className="today">
-        Today is {moment().format('LL')}
+      <div className='today'>
+        {moment().format('LLLL')}&nbsp;
+        <SunOrMoon h={moment().format('h')} ampm={moment().format('A')} />
       </div>
-      <Block className="b1" ordinal="first" dayoftheweek="saturday" />
-      <Block className="b2" ordinal="second" dayoftheweek="sunday" />
+      <hr />
+      <Block ordinal="first" dayoftheweek="saturday" />
+      <Block ordinal="second" dayoftheweek="sunday" />
     </div>
   )
 }

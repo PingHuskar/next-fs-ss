@@ -13,6 +13,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background: #242424;
 }
 body .App {
   display: flex;
@@ -24,42 +25,74 @@ body .App {
   font-size: 2em;
   text-align: center;
 }
-body .App .today {
-  margin-bottom: 5vh;
-  -webkit-text-decoration: 2px underline;
-          text-decoration: 2px underline;
+body .App hr {
+  width: 30%;
 }
-body .App .b1 {
-  margin-top: 1vh;
+body .App hr:first-of-type {
+  width: 100%;
+}
+body .App .block {
   margin-bottom: 2vh;
 }
-body .App .b1 b {
+body .App .block u {
   -webkit-text-decoration: 2px underline;
           text-decoration: 2px underline;
 }
-body .App .b1 .cd {
+body .App .block .cd {
   font-weight: bold;
   font-size: 3em;
 }
-body .App .b1 p:last-child {
-  font-size: 1.25em;
-}
-body .App .b2 {
-  margin-top: 1vh;
-  margin-bottom: 2vh;
-}
-body .App .b2 b {
-  -webkit-text-decoration: 2px underline;
-          text-decoration: 2px underline;
-}
-body .App .b2 .cd {
-  font-weight: bold;
-  font-size: 3em;
-}
-body .App .b2 p:last-child {
+body .App .block p:last-child {
   font-size: 1.25em;
 }
 
 .firstcap {
   text-transform: capitalize;
+}
+
+.today {
+  font-size: 2em;
+  font-family: serif;
+}
+
+.monday {
+  color: yellow;
+  -webkit-text-decoration: 2px underline yellow;
+          text-decoration: 2px underline yellow;
+}
+
+.tuesday {
+  color: pink;
+  -webkit-text-decoration: 2px underline pink;
+          text-decoration: 2px underline pink;
+}
+
+.wednesday {
+  color: green;
+  -webkit-text-decoration: 2px underline green;
+          text-decoration: 2px underline green;
+}
+
+.thursday {
+  color: orange;
+  -webkit-text-decoration: 2px underline orange;
+          text-decoration: 2px underline orange;
+}
+
+.friday {
+  color: cyan;
+  -webkit-text-decoration: 2px underline cyan;
+          text-decoration: 2px underline cyan;
+}
+
+.saturday {
+  color: purple;
+  -webkit-text-decoration: 2px underline purple;
+          text-decoration: 2px underline purple;
+}
+
+.sunday {
+  color: red;
+  -webkit-text-decoration: 2px underline red;
+          text-decoration: 2px underline red;
 }/*# sourceMappingURL=App.css.map */

@@ -1,6 +1,5 @@
 import './App.css'
 import moment from 'moment/moment'
-import gsap from 'gsap'
 
 function ordinalafter(ordinal) {
     switch (ordinal.toLowerCase()) {
@@ -25,11 +24,15 @@ export const Block = (props) => {
         let z = moment().add(c, 'days')
         if (z.format('dddd').toLowerCase() === props.dayoftheweek && z.format('D') >= ordinalafter(props.ordinal) && z.format('D') <= ordinalbefore(props.ordinal)) {
           return <>
-          <hr />
-          <div className={props.className} >
-          <p>Next <b className='firstcap'>{props.ordinal} {z.format('dddd')}</b> in <span className='cd'>{c}</span> Day{c > 1 ? 's' : ''}</p>
-          <p><b>{z.format('LL')}</b></p>
+          <div className='block' >
+            { c === 0 ? 
+            <p>Today is <b className={z.format('dddd').toLowerCase() + ' firstcap today'}>{props.ordinal} {z.format('dddd')}</b></p>
+            : 
+            <p>Next <u className='firstcap'>{props.ordinal} {z.format('dddd')}</u> in <span className='cd'>{c}</span> Day{c > 1 ? 's' : ''}</p>
+          }
+            { c > 0 ? <p><b>{z.format('LL')}</b></p> : ''}
           </div>
+          <hr />
           </> 
         }
         c++
