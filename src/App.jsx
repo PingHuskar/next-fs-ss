@@ -2,12 +2,16 @@ import './App.css'
 import moment from 'moment/moment'
 import gsap from 'gsap'
 import { Block } from './Block'
+import { useEffect } from 'react'
+
 
 function App() {
-  const ease = "back"
-  gsap.from(".today",{y: -screen.height, duration: 2, delay: 0,ease: ease})
-  gsap.from(".b1",{x: -screen.width, duration: 2, delay: .5,ease: ease})
-  gsap.from(".b2",{x: screen.width, duration: 2, delay: .75,ease: ease})
+  useEffect(() => {
+    const ease = "back"
+    gsap.from(".today",{y: -screen.height, duration: 2, delay: 0,ease: ease})
+    gsap.from(".b1",{x: -screen.width, duration: 2, delay: .5,ease: ease})
+    gsap.from(".b2",{x: screen.width, duration: 2, delay: .75,ease: ease})
+  })
   return (
     <div className="App">
       <div className="today">
