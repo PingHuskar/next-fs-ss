@@ -3,8 +3,11 @@ import './App.css'
 export const SunOrMoon = (props) => {
     const h = props.h
     const ampm = props.ampm
-    if ((h < 6 && ampm === "AM") || (h > 6 && ampm === "PM")) {
-        return <span>🌙</span>
+    if (
+      ((h < 6 || h === 12) && ampm === "AM") ||
+      (h > 5 && h < 12 && ampm === "PM")
+    ) {
+      return <span>🌙</span>;
     }
     return (
         <span>☀️</span>
