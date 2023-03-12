@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { Block } from './Block'
 import { SunOrMoon } from './SunOrMoon'
 import { useEffect } from 'react'
+import { CurrentTime } from './CurrentTime'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <div className='today'>
-        {moment().format('LLLL')}&nbsp;
+        <CurrentTime format='LLLL' />&nbsp;
         <SunOrMoon h={moment().format('h')} ampm={moment().format('A')} />
       </div>
       <hr />

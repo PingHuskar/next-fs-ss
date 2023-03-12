@@ -32,7 +32,7 @@ body .App hr:first-of-type {
   width: 100%;
 }
 body .App .block {
-  margin-bottom: 2vh;
+  margin-bottom: 1.5vh;
 }
 body .App .block u {
   -webkit-text-decoration: 2px underline;
@@ -40,9 +40,12 @@ body .App .block u {
 }
 body .App .block .cd {
   font-weight: bold;
-  font-size: 3em;
+  font-size: 2em;
 }
 body .App .block p:last-child {
+  font-size: 0.75em;
+}
+body .App .block p:last-child b {
   font-size: 1.25em;
 }
 
@@ -51,7 +54,7 @@ body .App .block p:last-child {
 }
 
 .today {
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: serif;
 }
 

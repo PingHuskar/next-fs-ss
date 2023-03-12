@@ -31,16 +31,19 @@ body {
         }
         .block {
             // margin-top: 1vh;
-            margin-bottom: 2vh;
+            margin-bottom: 1.5vh;
             u {
                 text-decoration: 2px underline;
             }
             .cd {
                 font-weight: bold;
-                font-size: 3em;
+                font-size: 2em;
             }
             p:last-child {
-                font-size: 1.25em;
+                font-size: 0.75em;
+                b {
+                    font-size: 1.25em;
+                }
             }
         }
     }
@@ -50,7 +53,7 @@ body {
 }
 
 .today {
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: serif;
 }
 

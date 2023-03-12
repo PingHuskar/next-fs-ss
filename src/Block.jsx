@@ -30,7 +30,7 @@ export const Block = (props) => {
             : 
             <p>Next <u className='firstcap'>{props.ordinal} {z.format('dddd')}</u> in <span className='cd'>{c}</span> Day{c > 1 ? 's' : ''}</p>
           }
-            { c > 0 ? <p><b>{z.format('LL')}</b></p> : ''}
+            { c > 0 ? <p><b>(</b>{z.format('LL')}<b>)</b></p> : ''}
           </div>
           <hr />
           </> 
